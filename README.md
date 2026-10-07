@@ -312,8 +312,59 @@ Neste projeto foram aplicados conceitos importantes de automação e qualidade d
 \- Validação do comportamento esperado;
 
 \- Organização de um framework de automação.
+## ▶️ Como executar os testes
 
+### Pré-requisitos
 
+Para executar o projeto localmente, é necessário ter instalado:
+
+- [.NET SDK 10](https://dotnet.microsoft.com/download/dotnet/10.0)
+- Git
+- Google Chrome
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/DantasNPR/ProjetoTesteSelenium.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd ProjetoTesteSelenium
+```
+
+### Restaurar as dependências
+
+```bash
+dotnet restore
+```
+
+### Executar os testes
+
+```bash
+dotnet test
+```
+
+O comando irá restaurar e compilar o projeto, descobrir os cenários automatizados e executar os testes utilizando **xUnit, Reqnroll e Selenium WebDriver**.
+
+## 🔄 Fluxo da automação
+
+```text
+Feature (Gherkin)
+       ↓
+Step Definitions
+       ↓
+Page Objects
+       ↓
+Actions / ElementsMap
+       ↓
+Selenium WebDriver
+       ↓
+Aplicação Web
+       ↓
+Validação do resultado
+```
 
 \## 👨‍💻 Autor
 
