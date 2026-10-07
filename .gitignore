@@ -1,0 +1,33 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build .NET
+bin/
+obj/
+
+# Test results
+TestResults/
+*.trx
+
+# Code coverage
+coverage/
+coverage.*
+*.coverage
+
+# Logs
+*.log
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
