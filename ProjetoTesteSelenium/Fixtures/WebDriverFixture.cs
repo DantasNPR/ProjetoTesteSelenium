@@ -1,8 +1,9 @@
 ﻿using OpenQA.Selenium;
 using ProjetoTesteSelenium.Drivers;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using OpenQA.Selenium;
+using ProjetoTesteSelenium.Config;
+using ProjetoTesteSelenium.Drivers;
 
 namespace ProjetoTesteSelenium.Fixtures
 {
@@ -12,10 +13,23 @@ namespace ProjetoTesteSelenium.Fixtures
 
         public WebDriverFixture()
         {
-            Driver = DriverFactory.CreateDriver(BrowserType.Chrome);
+            var settings = ConfigurationManager.Settings;
 
-            Driver.Manage().Window.Maximize();
-            Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
+            var browser = Enum.Parse<BrowserType>(
+                settings.Browser,
+                ignoreCase: true);
+
+            Driver = DriverFactory.CreateDriver(
+                browser,
+                settings.Headless);
+
+            if (!settings.Headless)
+            {
+                Driver.Manage().Window.Maximize();
+            }
+
+            Driver.Manage().Timeouts().PageLoad =
+                TimeSpan.FromSeconds(settings.Timeout);
         }
 
         public void Dispose()
