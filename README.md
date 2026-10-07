@@ -48,64 +48,35 @@ Ao final da execução, o teste verifica se a aplicação apresenta a confirmaç
 
 
 
-\## 🥒 Cenário BDD
+## 🥒 Cenário BDD
 
-
-
-O comportamento do teste é descrito em \*\*Gherkin\*\*, tornando o cenário legível e aproximando a especificação do comportamento esperado da aplicação.
-
-
+O comportamento do teste é descrito em **Gherkin**, tornando o cenário legível e aproximando a especificação do comportamento esperado da aplicação.
 
 ```gherkin
-
-\# language: pt
-
-
+# language: pt
 
 Funcionalidade: Registro de defeitos
 
-
-
-&#x20; @TelaRegistroDefeito
-
-&#x20; Cenário: Registrar defeito no módulo Login com severidade baixa e prioridade P1 em produção
-
-&#x20;   Dado que o usuário está na aba "Playground QA" com o formulário de registro de defeitos disponível
-
-&#x20;   Quando preenche o campo Título do defeito com "Defeito de exemplo"
-
-&#x20;   E seleciona o módulo afetado "Login"
-
-&#x20;   E seleciona a severidade "Baixa"
-
-&#x20;   E seleciona o ambiente "Produção"
-
-&#x20;   E preenche o campo E-mail de quem reportou com "voce@empresa.com"
-
-&#x20;   E informa a data de deteccao "01/01/2023"
-
-&#x20;   E informa "1" no campo Ocorrencias
-
-&#x20;   E seleciona a prioridade "P1"
-
-&#x20;   E preenche o campo Passos para reproduzir com:
-
-&#x20;     """
-
-&#x20;     1. Acessar a tela X
-
-&#x20;     2. Preencher o campo Y
-
-&#x20;     3. Observar o resultado Z
-
-&#x20;     """
-
-&#x20;   E marca a confirmacao de que o relato nao contém informacoes sensíveis
-
-&#x20;   E clica no botao "Registrar defeito"
-
-&#x20;   Então deve visualizar a mensagem 'Defeito registrado com sucesso. Ele já aparece na aba "Tabela de defeitos".'
-
+@TelaRegistroDefeito
+Cenário: Registrar defeito no módulo Login com severidade baixa e prioridade P1 em produção
+  Dado que o usuário está na aba "Playground QA" com o formulário de registro de defeitos disponível
+  Quando preenche o campo Título do defeito com "Defeito de exemplo"
+  E seleciona o módulo afetado "Login"
+  E seleciona a severidade "Baixa"
+  E seleciona o ambiente "Produção"
+  E preenche o campo E-mail de quem reportou com "voce@empresa.com"
+  E informa a data de deteccao "01/01/2023"
+  E informa "1" no campo Ocorrencias
+  E seleciona a prioridade "P1"
+  E preenche o campo Passos para reproduzir com:
+    """
+    1. Acessar a tela X
+    2. Preencher o campo Y
+    3. Observar o resultado Z
+    """
+  E marca a confirmacao de que o relato nao contém informacoes sensíveis
+  E clica no botao "Registrar defeito"
+  Então deve visualizar a mensagem 'Defeito registrado com sucesso. Ele já aparece na aba "Tabela de defeitos".'
 ```
 
 
