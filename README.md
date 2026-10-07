@@ -1,5 +1,9 @@
 \# 🧪 Automação de Testes Web com Selenium e C#
 
+![C#](https://img.shields.io/badge/C%23-.NET-512BD4?style=for-the-badge&logo=dotnet)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![xUnit](https://img.shields.io/badge/Testes-xUnit-512BD4?style=for-the-badge)
+![BDD](https://img.shields.io/badge/BDD-Gherkin-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
 
 
 Projeto de automação de testes Web desenvolvido em \*\*C# e Selenium WebDriver\*\*, utilizando \*\*BDD com Gherkin\*\* e uma arquitetura baseada em \*\*Page Object Model (POM)\*\*.
