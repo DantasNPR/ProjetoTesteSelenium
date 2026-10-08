@@ -31,3 +31,6 @@ _ReSharper*/
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+# Reqnroll generated files
+*.feature.cs
